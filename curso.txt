@@ -1,0 +1,19 @@
+1. DESCARGA DE SOFTWARE -----
+	
+	A. GIT (GIT BASH) https://git-scm.com/downloads
+	B. RStudio https://www.rstudio.com/products/rstudio/download/
+
+
+
+2. MATERIAL DIDACTICO -----
+
+	(GIT) https://www.youtube.com/watch?v=DVRQoVRzMIY&t=1257s
+
+
+3. EJERCICIOS -----
+	
+	A. Descargar GIT
+	B. Crear una cuenta en GitHub
+	C. Descargar RStudio
+	D. Clonar repositorio de la clase
+	E. Instalar ggplot2 & dplyr
