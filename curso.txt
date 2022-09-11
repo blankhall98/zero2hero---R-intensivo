@@ -8,6 +8,10 @@
 2. MATERIAL DIDACTICO -----
 
 	(GIT) https://www.youtube.com/watch?v=DVRQoVRzMIY&t=1257s
+	(finanzas) finance.yahoo.com
+	(R) bookdown.org
+	(dudas programación) stackoverflow.com
+	(cheet sheet) https://www.datacamp.com/cheat-sheet/tidyverse-cheat-sheet-for-beginners
 
 
 3. EJERCICIOS -----

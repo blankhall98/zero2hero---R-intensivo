@@ -196,3 +196,79 @@ library(ggplot2)
 #dplyr
 install.packages('dplyr')
 library(dplyr)
+
+# 11. MI PRIMERA BASE DE DATOS
+
+nombres <- c('Pepe','Juan','Pablo')
+edades <- c(25,24,23)
+sexo <- c('M','M','M')
+salario <- c(10000,18000,6000)
+
+AMIGOS <- data.frame(
+  'nombre' = nombres,
+  'edad' = edades,
+  'sexo' = sexo,
+  'salario' = salario
+)
+
+#NOMBRE DE LAS COLUMNAS
+names(AMIGOS)
+
+#CANTIDAD DE OBSERVACIONES
+length(AMIGOS)
+
+#DIMENSION DE LA BASE
+dim(AMIGOS)
+
+#ACCEDER A COLUMNA PARTICULAR
+age <- AMIGOS$edad
+age <- AMIGOS[['edad']]
+age <- AMIGOS[,2]
+
+sum(age)
+mean(age)
+sd(age)
+
+#ACCEDER A UN RENGLON
+AMIGOS[1,]
+
+# EJEMPLO: Deseamos imprimir:
+# Este es mi amigo jonatan, de 24 años de edad. 
+# El es hombre y gana $300 pesos mensuales.
+num_amigos <- dim(AMIGOS)[1]
+for(i in 1:num_amigos){
+  nom = AMIGOS[i,1]
+  ed = AMIGOS[i,2]
+  sex = AMIGOS[i,3]
+  sal = AMIGOS[i,4]
+  if(sex == 'M'){
+    sexo_definido <- 'Hombre'
+  }else{
+    sexo_definido <- 'Mujer'
+  }
+  if(sal > 9000){
+    print(paste('Este es mi amigo',nom,'de',ed,'años de edad.'))
+    print(paste('El es',sexo_definido,'y gana $',sal,'mensuales'))
+  }
+}
+
+#agregar nuevas columnas
+color_favorito <- c('Verde','Naranja','Rojo')
+
+AMIGOS['color favorito'] <- color_favorito
+
+AMIGOS['mascota'] <- c(T,F,T)
+
+#agregar nueva observacion
+num_obs <- dim(AMIGOS)[1]
+AMIGOS[num_obs+1,] <- c('Julieta',20,'F',14000,'Morado',T)
+AMIGOS[num_obs+2,] <- c('Romina',25,'F',17000,'Morado',T)
+
+#tipos de datos en dataframes
+AMIGOS$sexo <- as.factor(AMIGOS$sexo)
+AMIGOS$`color favorito` <- as.factor(AMIGOS$`color favorito`)
+AMIGOS$mascota <- as.factor(AMIGOS$mascota)
+AMIGOS$edad <- as.numeric(AMIGOS$edad)
+AMIGOS$salario <- as.numeric(AMIGOS$salario)
+
+barplot(table(AMIGOS$sexo,AMIGOS$`color favorito`))
